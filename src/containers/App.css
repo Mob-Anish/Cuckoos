@@ -1,0 +1,20 @@
+.span
+{
+    font-size: 3rem;
+    font-family: 'Rowdies', cursive;
+}
+
+.date span
+{
+    font-size: 1.98rem;
+    letter-spacing: .3rem;
+    font-family: 'Rowdies', cursive;
+    color: rgb(185, 94, 77);
+}
+
+.clock span
+{
+    font-size: 3.3rem;
+    letter-spacing: .3rem;
+    font-family: 'Rowdies', cursive;
+}
