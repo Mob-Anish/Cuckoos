@@ -1,4 +1,4 @@
-## Cuckoos
+## Cuckoos ⏲️
 
 ### It is simple clock application using react and used to tell the time and date of the current day. You can see the image 👇👇.
 
