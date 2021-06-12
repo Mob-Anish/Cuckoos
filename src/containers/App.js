@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   clockling() {
-    let time;
+    let time = "AM";
     let now = new Date();
     let sec = now.getSeconds();
     let min = now.getMinutes();
@@ -85,41 +85,35 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="clocking">
-        {this.state.list.length >= 1 ? (
-          <div>
-            <div className="clock">
-              <span>{this.state.list[this.state.list.length - 1].hour}</span>{" "}
-              <span>:</span>
-              <span>
-                {this.state.list[this.state.list.length - 1].min}
-              </span>{" "}
-              <span>:</span>
-              <span>
-                {this.state.list[this.state.list.length - 1].sec}{" "}
-                {this.state.list[this.state.list.length - 1].day}
-              </span>
-            </div>
-            <div className="date">
-              <span>{this.state.list[this.state.list.length - 1].year}</span>{" "}
-              <span>/</span>
-              <span>
-                {this.state.list[this.state.list.length - 1].month}
-              </span>{" "}
-              <span>/</span>
-              <span>
-                {this.state.list[this.state.list.length - 1].date}
-              </span>{" "}
-              <span>/</span>
-              <span>{this.state.list[this.state.list.length - 1].dy}</span>
-            </div>
+    if (this.state.list.length >= 1) {
+      return (
+        <div className="clockling">
+          <div className="clock">
+            <span>{this.state.list[this.state.list.length - 1].hour}</span>{" "}
+            <span>:</span>
+            <span>{this.state.list[this.state.list.length - 1].min}</span>{" "}
+            <span>:</span>
+            <span>
+              {this.state.list[this.state.list.length - 1].sec}
+              {this.state.list[this.state.list.length - 1].day}
+            </span>
           </div>
-        ) : (
-          ""
-        )}
-      </div>
-    );
+          <div className="date">
+            <span>{this.state.list[this.state.list.length - 1].year}</span>{" "}
+            <span>/</span>
+            <span>
+              {this.state.list[this.state.list.length - 1].month}
+            </span>{" "}
+            <span>/</span>
+            <span>{this.state.list[this.state.list.length - 1].date}</span>{" "}
+            <span>/</span>
+            <span>{this.state.list[this.state.list.length - 1].dy}</span>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
   }
 }
 
